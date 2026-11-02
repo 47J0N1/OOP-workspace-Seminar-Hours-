@@ -4,5 +4,5 @@
 /**
  * 
  */
-module UniversitySystem {
+module UniSystem {
 }
