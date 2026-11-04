@@ -22,7 +22,7 @@ public class Student {
         	throw new IllegalArgumentException("Name must not be null or blank!!");
         }
         this.name = name;
-        if(Gpa < 0 || Gpa > 64) {
+        if(Gpa < 0 || Gpa > 4) {
     		throw new IllegalArgumentException("The given Gpa must between 0 and 4!!");
     	}
         this.Gpa = Gpa;
