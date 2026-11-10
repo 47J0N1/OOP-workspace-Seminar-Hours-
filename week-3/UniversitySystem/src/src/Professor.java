@@ -70,9 +70,12 @@ package src;
 			return "Not experienced";
 	}
 	
+	public void completeAnotherYear() {
+		
+	}
 	public String toString() {	
 		return "The professor  with the employee ID : " + EmployeeID + 
 			   " named " + ProfessorName + ", has a specialization on " + Prof_Specialization + 
-			   " and also has around " + YearOfExperience + " years of experience" + ".";
+			   ".Also He/she has around " + YearOfExperience + " years of experience" + ".";
 	}
 }

@@ -17,7 +17,7 @@ public class Student {
     
         public Student(String StudentId,String name,double Gpa,int enrollmentYear){
         
-        this.StudentId = "S-100" + counter++;
+        this.StudentId = "S-" + counter++;
         if(name == null || name.isBlank()) {
         	throw new IllegalArgumentException("Name must not be null or blank!!");
         }

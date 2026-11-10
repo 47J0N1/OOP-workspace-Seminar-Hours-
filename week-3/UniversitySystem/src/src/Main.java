@@ -12,12 +12,15 @@ public class Main {
 		Student FourthStudent = new Student("","Super Mario",1.1,2004);
 	
 		System.out.println(FirstStudent);
+		System.out.println(SecondStudent);
+		
 		System.out.println("---------------------------------------------------------------------------------------------------");
 		
 		Professor FirstProf = new Professor("","Evis Plaku","(AI) and Robotics",15);
+		Professor SecondProf = new Professor("","Tester","Dummy Testing",6);
 		
-		System.out.println(FirstProf + "\nHis Academic Title is: " + FirstProf.AcademicTitle());
-		
+		System.out.println(FirstProf  + "\nHis Academic Title is: " + FirstProf.AcademicTitle());
+		System.out.println(SecondProf + "\nHis Academic Title is: " + SecondProf.AcademicTitle());
 //Getting one of the attributes to the corresponding objects
 		
 		System.out.println("---------------------------------------------------------------------------------------------------");
@@ -29,7 +32,7 @@ public class Main {
 //Updating GPA for one specific student
 		
 		System.out.println("---------------------------------------------------------------------------------------------------");
-		System.out.print("From this GPA " + FirstStudent.getGpa() + " to this ");
+		System.out.print("The GPA of the first Student changed from " + FirstStudent.getGpa() + " to this ");
 		FirstStudent.updateGpa(3.5);
 		System.out.print(FirstStudent.getGpa());
 		
