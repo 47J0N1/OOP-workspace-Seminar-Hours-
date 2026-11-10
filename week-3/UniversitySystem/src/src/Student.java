@@ -6,18 +6,18 @@ public class Student {
 //1.1.List of Properties	
 	
     private String StudentId;
-    public  String name;
+    private String name;
     private double Gpa;
     private final int enrollmentYear;
     private int currentYear = 2026;
-    private int counter = 0;
+    private static int counter = 0;
     
     
 //1.1.Constructor
     
         public Student(String StudentId,String name,double Gpa,int enrollmentYear){
         
-        this.StudentId = "S-" + counter++;
+        this.StudentId = "S-100" + counter++;
         if(name == null || name.isBlank()) {
         	throw new IllegalArgumentException("Name must not be null or blank!!");
         }
@@ -51,7 +51,7 @@ public class Student {
         	this.StudentId = Id;
         }
         public void updateGpa(double newGpa) {
-        	if(newGpa < 0 || newGpa > 4) {
+        	if(newGpa < 0.0 || newGpa > 4.0) {
         		throw new IllegalArgumentException("The given Gpa must between 0 and 4");
         	}
         	this.Gpa = newGpa;
@@ -69,14 +69,19 @@ public class Student {
         
         public int yearsEnrolled(int currentYear) {
         	
-        	if(currentYear<enrollmentYear)
-        		throw new IllegalArgumentException("Current Year that You have been put should not be smaller than the enrollment Year");
+        	if(currentYear < enrollmentYear)
+        		throw new IllegalArgumentException("Current year that you have put should not be smaller than the enrollment Year");
         	
         	return currentYear-enrollmentYear;
         }
+        
+        @Override
+        
         public String toString() {
         	
-        	return "ID: " + StudentId +  ", Name: " + name + ", Gpa: " + Gpa + ", EnrollmentYear: " + enrollmentYear;
+        	return "Student with the ID: " + StudentId +  ", named  " + name + 
+        	       ", has a grade point average of " + Gpa + 
+        	       ", is enrolled in the year " + enrollmentYear + ".";
       }
       
 }      
