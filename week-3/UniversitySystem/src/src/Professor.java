@@ -55,10 +55,6 @@ public class Professor {
 		this.Prof_Specialization = newProfSpecialization;
 	}
 	
-	public void setYearOfExperience(int yearOfEXP) {
-		this.YearOfExperience = yearOfEXP;
-	}
-	
 	//2.4 Other Methods
 	public String AcademicTitle() {
 		if(YearOfExperience == 0 || YearOfExperience <=5) 
@@ -78,9 +74,9 @@ public class Professor {
 			return "Not experienced";
 	}
 	
-	public void completeAnotherYear() {
-		
-	}
+	 public void completeAnotherYear() {
+		 YearOfExperience++;
+	    }
 	
 	@Override
 	
