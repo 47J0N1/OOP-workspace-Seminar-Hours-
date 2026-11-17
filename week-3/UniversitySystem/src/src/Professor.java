@@ -1,17 +1,17 @@
 package src;
 
 //0.0 Identity
-	public class Professor {
+public class Professor {
 	
-//1.1 List of Properties
+		//1.1 List of Properties
 	
-		private String EmployeeID;
+		private final String EmployeeID;
 		private String ProfessorName;
 		private String Prof_Specialization;
 		private int YearOfExperience;
 		private static int counter = 0;
 
-//2.1 Constructor
+	//2.1 Constructor
 
 	public Professor(String EmployeeNID,String Professor_Name,String Professor_Spec,int Exp){
 		this.EmployeeID = "P-" + counter++;
@@ -32,8 +32,8 @@ package src;
 		this.YearOfExperience = Exp;
 		
 		
-}
-//2.2Get/Set Methods
+	}
+	//2.2Get/Set Methods
 
 	public String getEmployeNoID(){
 		return EmployeeID;
@@ -51,7 +51,15 @@ package src;
 	public void setNewProfName(String ProfName) {
 		this.ProfessorName = ProfName;
 	}
-//2.4 Other Methods
+	public void setProfSpecialization(String newProfSpecialization) {
+		this.Prof_Specialization = newProfSpecialization;
+	}
+	
+	public void setYearOfExperience(int yearOfEXP) {
+		this.YearOfExperience = yearOfEXP;
+	}
+	
+	//2.4 Other Methods
 	public String AcademicTitle() {
 		if(YearOfExperience == 0 || YearOfExperience <=5) 
 			return "Assisant Professor";
@@ -73,6 +81,9 @@ package src;
 	public void completeAnotherYear() {
 		
 	}
+	
+	@Override
+	
 	public String toString() {	
 		return "The professor  with the employee ID : " + EmployeeID + 
 			   " named " + ProfessorName + ", has a specialization on " + Prof_Specialization + 
