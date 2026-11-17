@@ -74,10 +74,6 @@ public class Professor {
 			return "Not experienced";
 	}
 	
-	 public void completeAnotherYear() {
-		 YearOfExperience++;
-	    }
-	
 	@Override
 	
 	public String toString() {	
