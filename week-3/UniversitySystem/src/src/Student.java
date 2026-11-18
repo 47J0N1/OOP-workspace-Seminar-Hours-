@@ -14,7 +14,7 @@ public class Student {
     private final int enrollmentYear;
     private int currentYear = 2026;
     private static int counter = 0;
-    private final int MAX_COURSES = 6;
+    private final static int MAX_COURSES = 6;
     private final List <Course> Courses = new ArrayList<>();
     
     
